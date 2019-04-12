@@ -1,0 +1,37 @@
+git clone https://github.com/U2625/github-slideshow.git
+
+cd github-slideshow
+
+git branch my-slide
+git branch			* master
+  				my-slide
+
+git status
+
+git push --set-upstream origin my-slide
+
+git branch			* master
+git checkout my-slide		перекл на др ветку
+git branch			* my-slide
+
+touch _posts/0000-01-02-U2625.md	созд файл
+vim _posts/0000-01-02-U2625.md
+
+git add _posts/0000-01-02-U2625.md	доб нов измен
+git status
+
+git commit -m "Text for the second slide"
+
+git push
+
+nano _posts/0000-01-02-U2625.md
+git add _posts/0000-01-02-U2625.md
+git commit -m "replaced 5 line"
+git push
+
+git checkout master
+git merge my-slide
+git push
+
+git branch -d my-slide		удалили ветку
+
